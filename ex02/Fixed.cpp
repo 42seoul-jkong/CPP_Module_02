@@ -116,8 +116,7 @@ Fixed& Fixed::operator++()
 
 Fixed Fixed::operator++(int)
 {
-    this->value++;
-    return Fixed(NULL, this->value);
+    return Fixed(NULL, this->value++);
 }
 
 Fixed& Fixed::operator--()
@@ -128,8 +127,7 @@ Fixed& Fixed::operator--()
 
 Fixed Fixed::operator--(int)
 {
-    this->value--;
-    return Fixed(NULL, this->value);
+    return Fixed(NULL, this->value--);
 }
 
 Fixed::~Fixed()
