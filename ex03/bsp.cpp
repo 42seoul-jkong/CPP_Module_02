@@ -19,5 +19,5 @@ bool bsp(const Point a, const Point b, const Point c, const Point point)
     Fixed pbc = AreaOfTriangle(point, b, c);
     Fixed pac = AreaOfTriangle(a, point, c);
     Fixed pab = AreaOfTriangle(a, b, point);
-    return !(abc > pbc + pac + pab);
+    return abc == pbc + pac + pab;
 }

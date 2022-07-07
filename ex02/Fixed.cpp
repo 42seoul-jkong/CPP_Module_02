@@ -100,12 +100,12 @@ Fixed Fixed::operator-(const Fixed& that) const
 
 Fixed Fixed::operator*(const Fixed& that) const
 {
-    return Fixed(NULL, (this->value * that.value) >> FRACTIONAL_BITS);
+    return Fixed(NULL, this->value * that.value / (1 << FRACTIONAL_BITS));
 }
 
 Fixed Fixed::operator/(const Fixed& that) const
 {
-    return Fixed(NULL, (this->value / that.value) << FRACTIONAL_BITS);
+    return Fixed(NULL, this->value * (1 << FRACTIONAL_BITS) / that.value);
 }
 
 Fixed& Fixed::operator++()

@@ -6,4 +6,5 @@ SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 include ../template.mk
 
-main.cpp Fixed.cpp: Fixed.hpp
+main.cpp Fixed.cpp Point.cpp bsp.cpp: Fixed.hpp
+main.cpp Point.cpp bsp.cpp: Point.hpp
