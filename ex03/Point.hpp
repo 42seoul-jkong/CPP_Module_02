@@ -19,6 +19,8 @@ public:
     Point(const float value);
     Point& operator=(const Point& that);
     ~Point();
+    const Fixed& GetX() const;
+    const Fixed& GetY() const;
 };
 
 bool bsp(const Point a, const Point b, const Point c, const Point point);

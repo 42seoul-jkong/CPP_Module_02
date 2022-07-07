@@ -36,3 +36,13 @@ Point::~Point()
 {
     // No-OP
 }
+
+const Fixed& Point::GetX() const
+{
+    return this->x;
+}
+
+const Fixed& Point::GetY() const
+{
+    return this->y;
+}
