@@ -88,6 +88,16 @@ bool Fixed::operator!=(const Fixed& that) const
     return this->value != that.value;
 }
 
+Fixed Fixed::operator+() const
+{
+    return Fixed(NULL, +this->value);
+}
+
+Fixed Fixed::operator-() const
+{
+    return Fixed(NULL, -this->value);
+}
+
 Fixed Fixed::operator+(const Fixed& that) const
 {
     return Fixed(NULL, this->value + that.value);
